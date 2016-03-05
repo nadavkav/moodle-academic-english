@@ -106,15 +106,19 @@ if ($no!=5) {
           
       </div>
     </div>
-    <?php echo '<span class="guestuserera" >';
-    		if (!isloggedin()){
-			 echo "not login ";
-			}
-    		else{ 
-				echo $USER->username;
-			}
-			echo '</span>';
-			 ?>
+        <?php echo '<span class="guestuserera" >';
+        if (!isloggedin()){
+            //echo "not login ";
+            $lo = new moodle_url('/login/index.php');
+            echo '<a href="'.$lo.'">login</a>';
+        }
+        else{
+            echo $USER->username;
+            $lo = new moodle_url('/login/logout.php', array('sesskey' => sesskey()));
+            echo '<a href="'.$lo.'"> Logout</a>';
+        }
+        echo '</span>';
+        ?>
   </div>
   
 	<div class="footer-bottom">
