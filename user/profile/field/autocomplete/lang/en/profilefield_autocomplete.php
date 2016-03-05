@@ -15,11 +15,14 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'profilefield_autocomplete', language 'en', branch 'MOODLE_20_STABLE'
+ * Strings for component 'profilefield_autocomplete', language 'en', branch 'MOODLE_29_STABLE'
  *
  * @package   profilefield_autocomplete
- * @copyright 1999 onwards Martin Dougiamas  {@link http://moodle.com}
+ * @copyright  2016 Nadav Kavalerchik
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 $string['pluginname'] = 'Dropdown autocomplete';
+$string['profileautocompleteoptions'] = 'Options';
+$string['profileautocompletedefaultnotinoptions'] = 'Incorrect default option';
+$string['profiledefaultdata'] = '';

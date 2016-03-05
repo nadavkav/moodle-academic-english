@@ -18,12 +18,12 @@
  * autocomplete profile field version information.
  *
  * @package    profilefield_autocomplete
- * @copyright  2007 onwards Shane Elliot {@link http://pukunui.com}
+ * @copyright  2016 Nadav Kavalerchik
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2015111600;        // The current plugin version (Date: YYYYMMDDXX)
-$plugin->requires  = 2015111000;        // Requires this Moodle version
+$plugin->version   = 2016022800;        // The current plugin version (Date: YYYYMMDDXX)
+$plugin->requires  = 2015050500;        // Requires this Moodle version
 $plugin->component = 'profilefield_autocomplete'; // Full name of the plugin (used for diagnostics)

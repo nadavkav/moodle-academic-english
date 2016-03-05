@@ -26,6 +26,11 @@ Patch: mod/h5p - Add support to xAPI statements dispatch using ADL JS xAPI lib (
        [Reference Documentation Here](http://adlnet.github.io/xAPIWrapper/)
        should be used with an LRS to log xAPI statements (tested with: watershedlrs and grassblade)
        
+## 4/3/2016:
+Install: user/profile/field/autocomplete (https://github.com/nadavkav/moodle-profilefield_autocomplete.git)
+Settings:
+registerauth = enable
+Patch: Apply MDL-51247 forms: All new aria-pimped autocomplete mform element. (from Moodle 3.0 stable)
 
 TODO
 ====

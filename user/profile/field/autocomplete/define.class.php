@@ -18,14 +18,14 @@
  * autocomplete profile field definition.
  *
  * @package    profilefield_autocomplete
- * @copyright  2007 onwards Shane Elliot {@link http://pukunui.com}
+ * @copyright  2016 Nadav Kavalerchik
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 /**
  * Class profile_define_autocomplete
  *
- * @copyright  2007 onwards Shane Elliot {@link http://pukunui.com}
+ * @copyright  2016 Nadav Kavalerchik
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class profile_define_autocomplete extends profile_define_base {
@@ -36,11 +36,11 @@ class profile_define_autocomplete extends profile_define_base {
      */
     public function define_form_specific($form) {
         // Param 1 for autocomplete type contains the options.
-        $form->addElement('textarea', 'param1', get_string('profileautocompleteoptions', 'admin'), array('rows' => 6, 'cols' => 40));
+        $form->addElement('textarea', 'param1', get_string('profileautocompleteoptions', 'profilefield_autocomplete'), array('rows' => 6, 'cols' => 40));
         $form->setType('param1', PARAM_TEXT);
 
         // Default data.
-        $form->addElement('text', 'defaultdata', get_string('profiledefaultdata', 'admin'), 'size="50"');
+        $form->addElement('text', 'defaultdata', get_string('profiledefaultdata', 'profilefield_autocomplete'), 'size="50"');
         $form->setType('defaultdata', PARAM_TEXT);
     }
 
@@ -58,12 +58,12 @@ class profile_define_autocomplete extends profile_define_base {
 
         // Check that we have at least 2 options.
         if (($options = explode("\n", $data->param1)) === false) {
-            $err['param1'] = get_string('profileautocompletenooptions', 'admin');
+            $err['param1'] = get_string('profileautocompletenooptions', 'profilefield_autocomplete');
         } else if (count($options) < 2) {
-            $err['param1'] = get_string('profileautocompletetoofewoptions', 'admin');
+            $err['param1'] = get_string('profileautocompletetoofewoptions', 'profilefield_autocomplete');
         } else if (!empty($data->defaultdata) and !in_array($data->defaultdata, $options)) {
             // Check the default data exists in the options.
-            $err['defaultdata'] = get_string('profileautocompletedefaultnotinoptions', 'admin');
+            $err['defaultdata'] = get_string('profileautocompletedefaultnotinoptions', 'profilefield_autocomplete');
         }
         return $err;
     }

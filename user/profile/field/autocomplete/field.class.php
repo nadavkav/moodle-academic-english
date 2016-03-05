@@ -18,14 +18,14 @@
  * autocomplete profile field.
  *
  * @package    profilefield_autocomplete
- * @copyright  2007 onwards Shane Elliot {@link http://pukunui.com}
+ * @copyright  2016 Nadav Kavalerchik
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 /**
  * Class profile_field_autocomplete
  *
- * @copyright  2007 onwards Shane Elliot {@link http://pukunui.com}
+ * @copyright  2016 Nadav Kavalerchik
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class profile_field_autocomplete extends profile_field_base {
