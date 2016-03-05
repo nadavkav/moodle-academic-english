@@ -128,6 +128,14 @@ else {
     $settings['contents'][$cid]['styles'] = $core->getAssetsUrls($files['styles']);
 }
 
+// xAPI (ADL) js wrapper.
+$PAGE->requires->js(new moodle_url($CFG->httpswwwroot . '/mod/hvp/xapi-jswrapper/dist/xapiwrapper.min.js'), true);
+$PAGE->requires->jquery();
+$PAGE->requires->js(new moodle_url($CFG->httpswwwroot . '/mod/hvp/js/xapi-stmt-dispatcher.js'), true);
+
+// TODO: move code to use AMD (https://docs.moodle.org/dev/Javascript_Modules & Install grunt to compile AMD)
+//$PAGE->requires->js_call_amd('mod_hvp/xapi-stmt-dispatcher', 'initialise');
+
 // Print JavaScript settings to page
 $PAGE->requires->data_for_js('H5PIntegration', $settings, true);
 
