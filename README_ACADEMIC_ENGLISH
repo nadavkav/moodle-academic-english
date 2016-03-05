@@ -1,0 +1,16 @@
+Overview
+========
+Log of all changes applied to this version including:
+(1) Install of new modules
+(2) Changes in system settings
+(3) Core & external plugin patches
+On top of MOODLE_29_STABLE
+
+Changelog
+=========
+1/3/2016:
+Install: mod/h5p + submodule h5p/h5p-php-library (branch:file-storage-interface)
+Settings: 
+mod_hvp | export - (download) disable?
+mod_hvp | enable_save_content_state = enable
+Patch: mod/hvp/library/styles/h5p.css - change interactions widgets style

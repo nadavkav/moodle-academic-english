@@ -421,3 +421,8 @@ div.h5p-fullscreen {
 .h5p-dialog-ok-button:active {
   background: #eeffee;
 }
+
+/* OpenU - Academic English changes: */
+.h5peditor .ui-dialog .h5p-joubelui-button, .h5peditor .h5p-joubelui-button, .h5p-joubelui-button {
+    background-color: palevioletred !important;
+}
