@@ -1215,23 +1215,17 @@ c.category,c.shortname,c.fullname,c.visible,c.sortorder,c.idnumber ,c.startdate,
     	global $OUTPUT, $CFG;
 
 
-
-$bgimage ='<img src="'. $CFG->wwwroot.'/theme/enlight/pix/home/Icon_Courses.jpg'.'" alt="'.get_string('courseentery', 'theme_enlight').'" >' ;
-    	$popularheader = '<div  id="Popular-Courses2"  class ="Popular-Courses2">
-    						<div class="coursetitlebar"><h4>'.$bgimage.get_string('courseentery', 'theme_enlight').'</h4></div>
-							  
+        $totalpcourse = count($mycourses);
+        $bgimage = '<img src="' . $CFG->wwwroot . '/theme/enlight/pix/home/Icon_Courses.jpg' . '" alt="' . get_string('courseentery', 'theme_enlight') . '" >';
+        $popularheader = '<div  id="Popular-Courses2"  class ="Popular-Courses2">
+    						<div class="coursetitlebar"><h4>' . $bgimage . get_string('courseentery', 'theme_enlight') . '</h4></div>
 							 <div class="container-fluid">
 							  <div class="titlebar">
 							     <h2 class="pull-left"><i class="fa fa-star"></i>'
-    			.get_string('popularcourses', 'theme_enlight').'</a></h2>
-							   
-							   
+            . get_string('popularcourses', 'theme_enlight') . '</a></h2>
 							  </div>
-							<div class="row-fluid courses_list" data-crow="'.$totalpcourse.'">';
-    
-    	$popularfooter = '</div></div></div>';
-
-
+							<div class="row-fluid courses_list" data-crow="' . $totalpcourse . '">';
+        $popularfooter = '</div></div></div>';
 
 //display courses 
     	require_once($CFG->dirroot.'/course/lib.php');
