@@ -2157,7 +2157,7 @@ function qf_errorHandler(element, _qfMsg, escapedName) {
       errorSpan = document.createElement("span");
       errorSpan.id = \'id_error_\' + escapedName;
       errorSpan.className = "error";
-      element.parentNode.insertBefore(errorSpan, element.parentNode.firstChild);
+      element.parentNode.insertBefore(errorSpan, element.nextSibling);
       document.getElementById(errorSpan.id).setAttribute(\'TabIndex\', \'0\');
       document.getElementById(errorSpan.id).focus();
     }

@@ -1,0 +1,20 @@
+/* OpenU - Academic English changes: */
+
+/*  Following code will work if injected into the h5p iframe
+    More info: http://stackoverflow.com/questions/217776/how-to-apply-css-to-iframe#217833
+*/
+.h5p-joubelui-button {
+    background-color: palevioletred;
+}
+
+/* OpenU - Academic English */
+.mform span.error, #adminsettings span.error {
+    display: block;
+}
+
+#fitem_id_lastname .fitemtitle label,
+#fitem_id_firstname .fitemtitle label,
+#fitem_id_username .fitemtitle label,
+#fitem_id_password .fitemtitle label {display: none;}
+/* email (as username) should be left aligned */
+#id_username {direction: ltr; text-align: left;}

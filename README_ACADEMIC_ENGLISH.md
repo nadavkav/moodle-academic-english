@@ -32,8 +32,20 @@ Settings:
 registerauth = enable
 Patch: Apply MDL-51247 forms: All new aria-pimped autocomplete mform element. (from Moodle 3.0 stable)
 
+Admin: add custom profile field of type autocomplete + use institute list:
+https://gist.github.com/nadavkav/5a37a3a917484b6d05df
+patch: Adjust signin.php and login.php
+settings:
+$CFG->authloginviaemail = true;
+$CFG->rememberusername = yes; (and hide it from login ui)
+$CFG->sessiontimeout = 2592000; // 60sec X 60min * 24h * 30days
+$CFG->extendedusernamechars = true; (to enable emails inside username fields, register new user page)
+
+
 TODO
 ====
 mod/h5p - add xAPI JS to PHP AJAX to grade book?
 filter/h5p
 enrol/autoenrol - switch to a forked repo and get all the latest pull request fixes (https://github.com/markward/enrol_autoenrol/network)
+Auto approve registered users?
+Disable self approve emails?

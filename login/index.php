@@ -200,6 +200,11 @@ if ($frm and isset($frm->username)) {                             // Login WITH 
             set_moodle_cookie($USER->username);
         }
 
+        // Make user stay connected for 30days.
+        if (isset($frm->rememberusersession) && $frm->rememberusersession) {
+            $CFG->sessiontimeout = 2592000; // 60sec X 60min * 24h * 30days
+        }
+
         $urltogo = core_login_get_return_url();
 
     /// check if user password has expired
@@ -347,6 +352,7 @@ if (!empty($SESSION->loginerrormsg)) {
 
 $PAGE->set_title("$site->fullname: $loginsite");
 $PAGE->set_heading("$site->fullname");
+$PAGE->requires->jquery();
 
 echo $OUTPUT->header();
 

@@ -69,18 +69,25 @@ echo $OUTPUT->doctype() ?>
                 </div>
  
             	<div class="form-fields">
-                	<label><?php echo($strusername) ?></label>
-                    <input type="text" name="username"  value="" />
+                	<!--label><?php echo($strusername) ?></label-->
+                    <input type="text" name="username" id="username" placeholder="<?php echo($strusername) ?>" value="" />
+                    <div id="username-empty"><?php print_string('usernamemissing', 'core_academicenglish') ?></div>
+                    <div id="username-mustbe-email"><?php print_string('usernamemustbeemail', 'core_academicenglish') ?></div>
                 </div>
             	<div class="form-fields">
-                	<label><?php print_string("password") ?></label>
-                    <input type="password" name="password" value=""/>
+                	<!--label><?php print_string("password") ?></label-->
+                    <input type="password" name="password" id="password" placeholder="<?php print_string("password") ?>" value=""/>
+                    <div id="password-empty"><?php print_string('passwordmissing', 'core_academicenglish') ?></div>
                 </div>
 				<div class="support-field">
-                    <label class="checkbox">
+                    <!--label class="checkbox">
                         <input type="checkbox" name="rememberusername" value="1" />
 						<?php print_string('rememberusername', 'admin') ?>
-                    </label>
+                    </label-->
+                    <div class="rememberusersession">
+                        <input type="checkbox" name="rememberusersession" id="rememberusersession" value="1" />
+                        <label for="rememberusersession"><?php print_string('rememberusersession', 'core_academicenglish') ?></label>
+                    </div>
                     <p><a href="<?php  echo new moodle_url("/login/forgot_password.php"); ?>">
                     <?php print_string("forgotten") ?></a></p>
                 </div>
@@ -122,9 +129,49 @@ $(function(){
 		$("#login input[name=password]").val(pwd);
 		$("#login").submit();
 	});
-});
-</script>
 
+    var username = $('#login1 input[name=username]');
+    username.focusout(function() {
+        if (!username.val()) {
+            $('#login1 #username-empty').addClass('warning');
+            console.log('empty username');
+        } else {
+            console.log('empty email username');
+            if (!isValidEmailAddress(username.val())) {
+                $('#login1 #username-empty').removeClass('warning');
+                $('#login1 #username-mustbe-email').addClass('bademail-warning');
+            } else {
+                $('#login1 #username-mustbe-email').removeClass('bademail-warning');
+            }
+            $('#login1 #username-empty').removeClass('warning');
+        }
+    });
+    function isValidEmailAddress(emailAddress) {
+        var pattern = /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
+        return pattern.test(emailAddress);
+    }
+
+    $("#login1 #password")
+        .focusout(function() {
+            if( !$('#login1 #password').val() ) {
+                $('#login1 #password-empty').addClass('warning');
+            } else {
+                $('#login1 #password-empty').removeClass('warning');
+            }
+        });
+});
+
+</script>
+<style>
+    #username {direction: ltr;text-align: left;}
+    #username-mustbe-email {display: none;}
+    #username-empty {display: none;}
+    #username-empty.warning {display: block; background-color: orange;}
+    #username-mustbe-email.bademail-warning {display: block; background-color: red;}
+
+    #password-empty {display: none;}
+    #password-empty.warning {display: block; background-color: orange;}
+</style>
 <?php require_once(dirname(__FILE__) . '/includes/footer.php'); ?>
 </body>
 </html>

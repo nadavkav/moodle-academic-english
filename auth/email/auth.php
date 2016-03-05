@@ -105,6 +105,9 @@ class auth_plugin_email extends auth_plugin_base {
         // Trigger event.
         \core\event\user_created::create_from_userid($user->id)->trigger();
 
+        // Uncomment the following line to skip sending confirmation email to user.
+        //redirect("$CFG->wwwroot/index.php");
+
         if (! send_confirmation_email($user)) {
             print_error('auth_emailnoemail','auth_email');
         }

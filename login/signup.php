@@ -70,13 +70,14 @@ if ($mform_signup->is_cancelled()) {
     redirect(get_login_url());
 
 } else if ($user = $mform_signup->get_data()) {
-    $user->confirmed   = 0;
+    $user->confirmed   = 1; // User is automatically confirmed (do we really want it?)
     $user->lang        = current_language();
     $user->firstaccess = 0;
     $user->timecreated = time();
     $user->mnethostid  = $CFG->mnet_localhost_id;
     $user->secret      = random_string(15);
     $user->auth        = $CFG->registerauth;
+    $user->email       = $user->username; // copy username (external email) to email.
     // Initialize alternate name fields to empty strings.
     $namefields = array_diff(get_all_user_name_fields(), useredit_get_required_name_fields());
     foreach ($namefields as $namefield) {

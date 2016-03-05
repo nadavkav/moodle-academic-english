@@ -33,7 +33,7 @@ if ($no==5) {
 }else{
 	$THEME->sheets[] = 'enlight';
 }
-
+$THEME->sheets[] = 'academic-english';
 $THEME->supportscssoptimisation = false;
 $THEME->yuicssmodules = array();
 $THEME->enable_dock = true;
