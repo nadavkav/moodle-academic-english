@@ -41,6 +41,10 @@ $CFG->rememberusername = yes; (and hide it from login ui)
 $CFG->sessiontimeout = 2592000; // 60sec X 60min * 24h * 30days
 $CFG->extendedusernamechars = true; (to enable emails inside username fields, register new user page)
 
+## 6/3/2016:
+Install: local/flavours - local/flavours (new) save and restore system settings & plugins 
+Install: blocks/admin_presets (new) export and import system settings
+
 
 TODO
 ====
