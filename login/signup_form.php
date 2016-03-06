@@ -108,8 +108,8 @@ class login_signup_form extends moodleform {
         }
 
         if (!empty($CFG->sitepolicy)) {
-            $mform->addElement('header', 'policyagreement', get_string('policyagreement'), '');
-            $mform->setExpanded('policyagreement');
+            //$mform->addElement('header', 'policyagreement', get_string('policyagreement'), '');
+            //$mform->setExpanded('policyagreement');
             $mform->addElement('static', 'policylink', '', '<a href="'.$CFG->sitepolicy.'" onclick="this.target=\'_blank\'">'.get_String('policyagreementclick').'</a>');
             $mform->addElement('checkbox', 'policyagreed', get_string('policyaccept'));
             $mform->addRule('policyagreed', get_string('policyagree'), 'required', null, 'client');

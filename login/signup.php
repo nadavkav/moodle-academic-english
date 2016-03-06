@@ -64,6 +64,10 @@ if (isloggedin() and !isguestuser()) {
     exit;
 }
 
+//$PAGE->requires->js(new moodle_url('validate_signup.js'));
+$PAGE->requires->js_call_amd('core/form-signup-validate', 'initialise',
+    array(get_string('usernamemustbeemail', 'core_academicenglish')));
+
 $mform_signup = $authplugin->signup_form();
 
 if ($mform_signup->is_cancelled()) {

@@ -18,3 +18,8 @@
 #fitem_id_password .fitemtitle label {display: none;}
 /* email (as username) should be left aligned */
 #id_username {direction: ltr; text-align: left;}
+/* username is not a vaild email */
+#id_firstname.highlight,
+#id_lastname.highlight,
+#id_password.highlight,
+#id_username.highlight {border:2px solid red;}

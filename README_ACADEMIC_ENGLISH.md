@@ -53,6 +53,10 @@ $CFG->sitepolicy = 'link to disclaimer' (should add one to page footer from them
 patch: add signup/register button to user login page
 patch: add policy/disclaimer link to user login page
 
+Install: need to move lang/en/moodledata_lang_he_local_academicenglish.php to: moodledata/lang/he_local/academicenglish.php & purge caches
+Install: need to move lang/en/moodledata_lang_he_local_moodle.php to: moodledata/lang/he_local/moodle.php & purge caches
+
+
 TODO
 ====
 mod/h5p - add xAPI JS to PHP AJAX to grade book?
