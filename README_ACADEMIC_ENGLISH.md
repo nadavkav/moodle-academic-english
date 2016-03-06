@@ -40,7 +40,18 @@ $CFG->authloginviaemail = true;
 $CFG->rememberusername = yes; (and hide it from login ui)
 $CFG->sessiontimeout = 2592000; // 60sec X 60min * 24h * 30days
 $CFG->extendedusernamechars = true; (to enable emails inside username fields, register new user page)
+$CFG->guestloginbutton = false;
 
+## 6/3/2016:
+Install: local/flavours - local/flavours (new) save and restore system settings & plugins 
+Install: blocks/admin_presets (new) export and import system settings
+
+settings:
+$CFG->sitepolicyguest = 'link to disclaimer' (should add one to page footer from theme admin settings too)
+$CFG->sitepolicy = 'link to disclaimer' (should add one to page footer from theme admin settings too)
+
+patch: add signup/register button to user login page
+patch: add policy/disclaimer link to user login page
 
 TODO
 ====

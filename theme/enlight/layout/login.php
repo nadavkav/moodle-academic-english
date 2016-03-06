@@ -90,10 +90,17 @@ echo $OUTPUT->doctype() ?>
                     </div>
                     <p><a href="<?php  echo new moodle_url("/login/forgot_password.php"); ?>">
                     <?php print_string("forgotten") ?></a></p>
+                    <p><a target="_new" href="<?php  echo new moodle_url("/user/policy.php"); ?>">
+                    <?php print_string("policyagreement") ?></a></p>
                 </div>
                 <div class="form-action">
 					<input type="submit" id="loginbtn1" value="<?php print_string("login") ?>" />
                 </div>
+                </form>
+                <form action="signup.php" method="get" id="signup">
+                    <div class="form-action">
+                        <input type="submit" value="<?php print_string('signup', 'core_academicenglish') ?>" />
+                    </div>
                 </form>
 <?php if ($CFG->guestloginbutton and !isguestuser()) {  ?>
                 <form action="index.php" method="post" id="guestlogin">

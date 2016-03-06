@@ -27,5 +27,6 @@ $string['usernamemustbeemail'] = 'Username must be proper email';
 $string['passwordmissing'] = 'Password is missing';
 $string['rememberusersession'] = 'Remember user session';
 $string['mustchooseinstitute'] = 'Must choose an institute';
+$string['signup'] = 'Signup';
 
 
