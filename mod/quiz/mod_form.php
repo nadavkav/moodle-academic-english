@@ -119,6 +119,12 @@ class mod_quiz_mod_form extends moodleform_mod {
         // Grade settings.
         $this->standard_grading_coursemodule_elements();
 
+        // Grade to pass.
+        $mform->addElement('text', 'gradepenalty', get_string('gradepenalty', 'qbehaviour_deferredpenalty'));
+        //$mform->addHelpButton('gradepenalty', 'gradepenalty', 'grades');
+        $mform->setDefault('gradepenalty', '10');
+        $mform->setType('gradepenalty', PARAM_RAW);
+        
         $mform->removeElement('grade');
         if (property_exists($this->current, 'grade')) {
             $currentgrade = $this->current->grade;
