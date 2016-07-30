@@ -39,6 +39,30 @@ class auth_plugin_email extends auth_plugin_base {
         $this->config = get_config('auth/email');
     }
 
+
+    function pre_loginpage_hook() {
+        global $DB, $CFG;
+
+        if (!empty($_COOKIE['user_progress'])) {
+            // Read persistent auto login for 30 days, if exists > auto login. // Security Issue !!!
+            $persistent_user = rc4decrypt($_COOKIE['user_progress']);
+            //echo 'auto login user=' . $persistent_user;
+            if ($user = $DB->get_record('user', array('username' => $persistent_user, 'mnethostid' => $CFG->mnet_localhost_id))) {
+                complete_user_login($user);
+            }
+        }
+    }
+
+    function postlogout_hook($user) {
+        global $CFG;
+        // Remove persistent auto login for 30 days.
+        unset($_COOKIE['user_progress']);
+        unset($_COOKIE['MoodleSession']);
+        // TODO: user stronger encription : http://php.net/manual/en/function.mcrypt-encrypt.php
+        setcookie('user_progress', rc4encrypt('nouser'), time() + $CFG->sessiontimeout, $CFG->sessioncookiepath,
+            $CFG->sessioncookiedomain, $CFG->cookiesecure, $CFG->cookiehttponly);
+    }
+
     /**
      * Returns true if the username and password work and false if they are
      * wrong or don't exist.

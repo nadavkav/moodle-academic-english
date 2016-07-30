@@ -52,6 +52,16 @@ if ($CFG->forcelogin) {
     user_accesstime_log();
 }
 
+// Auto login, if user asked to be persistent.
+if (!empty($_COOKIE['user_progress'])) {
+    // Read persistent auto login for 30 days, if exists > auto login. // Security Issue !!!
+    $persistent_user = rc4decrypt($_COOKIE['user_progress']);
+    //echo 'auto login user=' . $persistent_user;
+    if ($user = $DB->get_record('user', array('username' => $persistent_user, 'mnethostid' => $CFG->mnet_localhost_id))) {
+        complete_user_login($user);
+    }
+}
+
 $hassiteconfig = has_capability('moodle/site:config', context_system::instance());
 
 // If the site is currently under maintenance, then print a message.

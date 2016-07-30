@@ -202,9 +202,11 @@ if ($frm and isset($frm->username)) {                             // Login WITH 
 
         // Make user stay connected for 30days.
         if (isset($frm->rememberusersession) && $frm->rememberusersession) {
-            $CFG->sessiontimeout = 2592000; // 60sec X 60min * 24h * 30days
+            $CFG->sessiontimeout = 60*60*24*30; // sec*min*hour*days = 60sec X 60min * 24h * 30days
+            setcookie('user_progress', rc4encrypt($USER->username), time() + $CFG->sessiontimeout, $CFG->sessioncookiepath,
+                $CFG->sessioncookiedomain, $CFG->cookiesecure, $CFG->cookiehttponly);
         }
-
+        set_user_preference('sessiontimeout', $CFG->sessiontimeout);
         $urltogo = core_login_get_return_url();
 
     /// check if user password has expired
