@@ -1,0 +1,10 @@
+1.0.3
+Improved temp folder cleanup after uninstall
+
+1.0.2
+File storing rewritten, what simplified installation and improved security
+Fixed PHP notices when $CFG->enableavailability is disabled
+Some minor fixes
+
+1.0.1
+First version available

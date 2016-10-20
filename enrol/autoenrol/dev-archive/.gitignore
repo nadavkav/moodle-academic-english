@@ -1,0 +1,7 @@
+.idea
+logs
+phpdoc-*.log
+api
+code-browser
+composer.lock
+vendor/

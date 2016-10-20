@@ -1,0 +1,7 @@
+.DS_STORE
+*.sublime-project
+*.sublime-workspace
+vendor
+classes/log/error_log.txt
+composer.phar
+.idea/

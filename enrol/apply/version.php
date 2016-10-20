@@ -1,0 +1,24 @@
+<?php
+/**
+ * *************************************************************************
+ * *                  Apply	Enrol   				                      **
+ * *************************************************************************
+ * @copyright   emeneo.com                                                **
+ * @link        emeneo.com                                                **
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later  **
+ * *************************************************************************
+ * ************************************************************************
+*/
+/**
+ * Short answer question type version information.
+ *
+ * @package    enrol apply
+ * @copyright  Emeneo {@link http://www.emeneo.com/}
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+defined('MOODLE_INTERNAL') || die();
+
+$plugin->version  = 2015110300;
+$plugin->requires = 2011080100;
+$plugin->maturity = MATURITY_STABLE;
+$plugin->release = 'Enrolment upon approval plugin Version 2.9-b';

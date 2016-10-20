@@ -1,0 +1,45 @@
+/*
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+ * general tool specific CSS rules
+ *
+ * @package     block_selectrss
+ *
+ * @copyright   Sebsoft.nl
+ * @author      R.J. van Dongen <rogier@sebsoft.nl>
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+*/
+div.block-selectrss-logopromo a img {
+    height: 37px;
+}
+.block-selectrss-container {
+}
+.block-selectrss-container .published {
+    padding: 10px;
+    background-color: #ddffdd;
+}
+.block-selectrss-container .unpublished {
+    padding: 10px;
+    background-color: #ddddff;
+}
+.block_selectrss .content ul li {
+    padding: 5px;
+    border: 1px solid #dddddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}

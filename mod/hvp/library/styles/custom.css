@@ -1,0 +1,232 @@
+.h5p-question-try-again::before {
+  float: right;
+  font-size: 120% !important;
+  margin-top: -1px !important;
+  padding-right: 0 !important;
+  line-height: 1.6em !important;
+  /* margin-top: 1px !important; */
+}
+
+.h5p-joubelui-button::before {
+  padding-left: 0.5em !important;
+  font-size: 120% !important;
+}
+
+.h5p-question-show-solution::before{
+  float: right;
+  margin-top: -3px !important;
+  padding-right:0px !important;
+  font-size: 131% !important;
+  line-height: 1.2em !important;
+  margin-top: 0 !important;
+}
+
+.h5p-interactive-video .h5p-question-iv-continue::before{
+  float: right;
+  margin-top: 2px !important;
+  padding-right:0px !important; 
+  font-size: 120% !important;
+  line-height: 1.5em !important;
+  margin-top: 0 !important;
+}
+
+.h5p-question-check-answer::before {
+  float: right;
+  margin-top: 1px !important;
+  padding-right:0px !important;
+  line-height: 1.5em !important;
+  margin-top: 0 !important;
+}   
+
+.h5peditor .ui-dialog .h5p-joubelui-button,
+.h5peditor .h5p-joubelui-button,
+.h5p-joubelui-button {
+  background: #064d6a none repeat scroll 0 0 !important;
+  border: medium none !important;
+  border-radius: 5px !important;
+  box-shadow: 0 6px #042f41 !important;
+  box-sizing: border-box !important;
+  height: 2em;
+  line-height: 1.6em !important;
+  padding: 6px 1.2em 0 1.2em !important;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "almoni-dl",Arial,Helvetica,sans-serif !important;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0 0.5em 1em;
+  outline: medium none;
+  text-align: center;
+  text-shadow: none;
+  transform: translateZ(0px);
+  vertical-align: baseline;
+}
+.h5peditor .ui-dialog .h5p-joubelui-button:hover,
+.h5peditor .h5p-joubelui-button:hover,
+.h5p-joubelui-button:hover {
+  background: #042f41 none repeat scroll 0 0 !important;
+
+}
+
+.h5p-question-feedback-content{
+  color: #064d6a !important; 
+  font-family: "almoni-dl",Arial,Helvetica,sans-serif !important;
+}
+
+.h5p-interactive-video .h5p-interaction-inner, .h5p-interactive-video .h5p-interaction-inner.h5p-image {
+  box-sizing: border-box;
+  padding: 2% 15% 4% !important;
+}
+ .h5p-interactive-video .h5p-interaction-inner.h5p-image {
+  padding-right: 0 !important;
+ }
+
+.h5p-question {
+  background: rgba(255, 255, 255, 1) none repeat scroll 0 0 !important;
+  position: relative;
+}
+
+.h5p-multichoice-interaction .h5p-interaction-outer,
+.h5p-dragtext-interaction .h5p-interaction-outer {
+  background: #82134e url("../images/course-header-purple.png") no-repeat scroll center center / cover !important;
+  height: 100%;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+
+.h5p-interactive-video .h5p-interaction-inner, .h5p-interactive-video .h5p-interaction-inner.h5p-image {
+  box-sizing: border-box;
+  margin-top: 3% !important;
+}
+.h5p-frame.h5p-gotoquestion {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.h5p-frame.h5p-gotoquestion .h5p-gotoquestion-choice:first-child {
+  margin-top: 0;
+}
+.h5p-frame.h5p-gotoquestion .h5p-gotoquestion-choice:last-child {
+  display: block;
+}
+.h5p-interaction.h5p-poster.h5p-gotoquestion-interaction.h5p-dragnbar-element {
+  min-width: 14em !important;
+}
+
+.h5p-drag-text .h5p-drag-droppable-words {
+  line-height: 1.75;
+  margin-left: 0;
+  width: 100% !important;
+  box-sizing: border-box;
+  padding-right: 8em !important;
+}
+
+.h5p-drag-text .h5p-drag-dropzone-container {
+  display: inline;
+  padding-right: 0.1em;
+  position: relative;
+  float: right;
+}
+
+
+.h5p-alternative-inner {
+  display: inline-block;
+}
+.h5p-interactive-video .h5p-interaction.h5p-poster {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.h5p-interactive-video .h5p-interaction.h5p-poster .h5p-interaction-outer {
+  overflow-y: hidden !important;
+}
+
+.h5p-question-introduction {
+  font-size: inherit !important;
+}
+.h5p-question-introduction *,
+.h5p-question-introduction > p {
+  font-size: 1.125em !important;
+}
+.h5p-drag-draggables-container .h5p-drag-draggable:first-child {
+  margin-left: 0;
+}
+.h5p-drag-dropped {
+  z-index: 1 !important;
+}
+
+.h5p-question-introduction p {
+  line-height: 1.3em;
+}
+
+.h5p-image > img {
+  margin-top: 3%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+.h5p-gotoquestion-interaction:not(.h5p-dragnbar-element):last-child {
+  top: 85% !important;
+  height: 2.5em !important;
+}
+.h5p-gotoquestion .h5p-gotoquestion-text {
+  display: none;
+}
+.h5p-gotoquestion .h5p-gotoquestion-wrapper,
+.h5p-gotoquestion .h5p-gotoquestion-choices {
+  background: transparent;
+}
+.h5p-gotoquestion .h5p-gotoquestion-choice {
+  margin: 5px auto;
+  text-align: center;
+  box-sizing: border-box;
+}
+.h5p-gotoquestion .h5p-gotoquestion-choice:last-child {
+  display: none;
+}
+.h5p-gotoquestion .h5p-gotoquestion-button {
+  background: #064d6a none repeat scroll 0 0 !important;
+  border: medium none !important;
+  border-radius: 5px !important;
+  box-shadow: 0 6px #042f41 !important;
+  box-sizing: border-box !important;
+  height: 2em;
+  line-height: 1.6em !important;
+  padding: 6px 1.2em 0 1.2em !important;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "almoni-dl",Arial,Helvetica,sans-serif !important;
+  font-size: 1em;
+  font-weight: bold;
+  outline: medium none;
+  text-align: center;
+  text-shadow: none;
+  transform: translateZ(0px);
+  vertical-align: baseline;
+  margin: 0;
+  width: auto !important;
+}
+.h5p-gotoquestion .h5p-gotoquestion-button:hover,
+.h5p-gotoquestion .h5p-gotoquestion-button:active,
+.h5p-gotoquestion .h5p-gotoquestion-button:focus {
+  background: #042f41 none repeat scroll 0 0 !important;
+  color: #fff !important;
+  display: inline-block !important;
+  position: static !important;
+}
+.h5p-gotoquestion .h5p-gotoquestion-button:hover:after,
+.h5p-gotoquestion .h5p-gotoquestion-button:active:after,
+.h5p-gotoquestion .h5p-gotoquestion-button:focus:after {
+  border: none !important;
+}
+
+.h5p-gotoquestion-choices {
+  overflow: visible !important;
+}

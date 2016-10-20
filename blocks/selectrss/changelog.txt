@@ -1,0 +1,20 @@
+Version 2015091711 (Release 1.0.3 (build 2015091711))
+* Fixed issue 5: notification subject "There are n messages awaiting moderation in Moodle"
+
+-----
+Version 2015040113 (Release 1.0.2 (build 2015040113))
+* Added possibility to display (partial) feed content (similar to block_rss_client)
+* Changed interface to resemble original layout of block_rss_client some more.
+
+-----
+Version 2015040112 (Release 1.0.1)
+* Better navigation / keep course context when managing feeds
+* viewfeed.php now requires capability on page level
+* Changed applicable formats so block can only be added on course-view and site-index
+* Changed language strings so block is now called "Moderated RSS" (Thanks for the name, David)
+* Removed capability "myaddinstance" (it's useless)
+* Usability in viewfeed.php (you can open the item in a new tab/window to view before (un)publishing)
+* Fixed issues 2 to 4 from bugtracker.
+
+* Thanks to David Mudrák for raising issues leading to this version.
+-----

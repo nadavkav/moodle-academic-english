@@ -1,0 +1,96 @@
+.h5p-interactive-video .h5p-interaction.h5p-poster {
+    background: transparent !important;
+    box-shadow: none !important;
+    margin-left: 15px;
+}
+.h5p-drag-text {
+    background: transparent !important;
+}
+.h5p-question {
+    background: transparent !important;
+}
+.h5p-drag-droppable-words {
+    width: 50%;
+    margin-top: 3px;
+}
+.h5p-drag-dropzone-container {
+    margin-left: 4px;
+}
+.h5p-drag-draggables-container {
+    width: 100%;
+    text-align: left;
+    margin-top:-5px;
+}
+.h5p-question-buttons.h5p-question-visible {
+    margin-top: -13px;
+   /* position: absolute;
+    top: 20px;
+    right: 0;
+    width: 50%;
+    margin: 0 !important;
+    min-height: 80px !important;
+    max-height: 100% !important;
+    padding-right: 10px;    */
+}
+.h5p-question-check-answer {
+    float: right !important;
+}
+.h5p-interactive-video .h5p-question .h5p-joubelui-button {
+    background: #1A73D9 !important;
+    float: right !important;
+}
+/*.h5p-question-show-solution {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    margin: 0 !important;
+}   */
+
+.h5p-question-feedback.h5p-question-visible {
+    margin: 0 !important;
+    padding: 1em;
+    background: #fff;
+      display: none !important;
+}
+
+.h5p-sc-set-progress {
+    height: 15px !important;
+}
+
+.h5p-sc-alternatives li:first-child {
+    /*margin-left: -10px !important;
+    margin-right: 10px !important; */
+}
+
+.h5p-interaction-button:before {
+    position: relative;
+    top: 1px;
+    padding: 2px 4px;
+    content: '\f111' !important;
+    border: 2px solid #fff;
+    border-radius: 100%;
+}
+.h5p-interaction.h5p-text-interaction.h5p-dragnbar-element:active .h5p-interaction-button:before {
+    content: '\f112' !important;
+}
+.h5p-interactive-video .h5p-text p {
+    text-align: right;
+}
+
+ul.h5p-sc-alternatives li.h5p-sc-alternative:hover, ul.h5p-sc-alternatives li.h5p-sc-alternative:hover{
+    background: black !important;
+    opacity:0.3;
+}
+
+.h5p-sc-alternatives li {
+    background-color: transparent !important;
+  
+}
+
+ul.h5p-sc-alternatives li.h5p-sc-alternative{
+    box-shadow: none !important;
+    border: blue !important;
+}
+.h5p-question-show-solution .h5p-joubelui-button{
+    display: none !important;
+}
